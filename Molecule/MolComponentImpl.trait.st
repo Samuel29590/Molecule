@@ -19,18 +19,6 @@ Trait {
 	#category : #'Molecule-Component'
 }
 
-{ #category : #'life cycle' }
-MolComponentImpl classSide >> activate [
-
-	^ MolComponentManager default homeServices activateComponent: self
-]
-
-{ #category : #'life cycle' }
-MolComponentImpl classSide >> activate: aComponentName [
-
-	^ MolComponentManager default homeServices activateComponent: self named: aComponentName
-]
-
 { #category : #testing }
 MolComponentImpl classSide >> componentType [
 
@@ -118,18 +106,6 @@ MolComponentImpl classSide >> ownComponentType [
 ]
 
 { #category : #'life cycle' }
-MolComponentImpl classSide >> passivate [
-
-	^ MolComponentManager default homeServices passivateComponent: self
-]
-
-{ #category : #'life cycle' }
-MolComponentImpl classSide >> passivate: aComponentName [
-
-	^ MolComponentManager default homeServices passivateComponent: self named: aComponentName
-]
-
-{ #category : #'life cycle' }
 MolComponentImpl classSide >> remove [
 
 	^ MolComponentManager default homeServices removeComponent: self
@@ -148,21 +124,9 @@ MolComponentImpl classSide >> start [
 ]
 
 { #category : #'start & stop' }
-MolComponentImpl classSide >> start: aComponentName [
-
-	^ MolUtils startComponent: self named: aComponentName
-]
-
-{ #category : #'start & stop' }
 MolComponentImpl classSide >> stop [
 
 	^ MolUtils stopComponent: self
-]
-
-{ #category : #'start & stop' }
-MolComponentImpl classSide >> stop: aComponentName [
-
-	^ MolUtils stopComponent: self named: aComponentName
 ]
 
 { #category : #deployment }

@@ -21,7 +21,6 @@ BaselineOfMolecule >> baseline: spec [
 			spec
 				package: 'Molecule';
 				package: 'Molecule-IDE' with: [ spec requires: #('Molecule') ];
-				package: 'Molecule-Examples' with: [ spec requires: #('Molecule') ];
 				package: 'Molecule-Tests' with: [ spec requires: #('Molecule') ];
 				package: 'Molecule-IDE-Tests' with: [ spec requires: #('Molecule-IDE') ].
 		 ]
